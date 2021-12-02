@@ -18,8 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::view("admin","admin/login");
 Route::post("login_submit","admin@login");
 
+Route::view("add_post","admin/post/add_post");
+Route::post("post_submit","post@store");
+Route::get("post_update/{id}","post@edit_post")->name('post_update');
+
 Route::group(['middleware'=>['admin_auth']], function(){
-Route::view("post","admin/post/list");
+Route::get("post","post@show_post");
 Route::view("page","admin/page/page");
 });
 

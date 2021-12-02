@@ -10,8 +10,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900|Montserrat:400,500,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="admin_asset/css/font-awesome.css">       
-    <link rel="stylesheet" href="admin_asset/css/style.css">    
+    <link rel="stylesheet" href="{{asset('admin_asset/css/font-awesome.css')}}">       
+    <link rel="stylesheet" href="{{asset('admin_asset/css/style.css')}}">    
 </head>
 <body id="main_container">
     <input type="hidden" id="session" value="mosiur">
@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-md-2 col-sm-3" id="admin-menu">
                     <ul class="menu-list">
-                        <li><a href="post">Manage Post</a></li>
+                        <li><a href="{{url('/post')}}">Manage Post</a></li>
                         <li><a href="page">Pages</a></li>
                         <li><a href="post">Post</a></li>
                         
@@ -54,7 +54,7 @@
             </div>
         </div>
     </div>    
-    <script src="admin_asset/js/admin_menu.js">
+    <script src="{{asset('admin_asset/js/admin_menu.js')}}">
         
     </script> 
 </body>
