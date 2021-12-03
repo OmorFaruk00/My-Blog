@@ -22,8 +22,8 @@
                     
                     <h2 class="text-white">MY Blog</h2>
                 </div>
-                <div class="col-md-offset-3 col-md-2">
-                    <div class="dropdown ">
+                <div class="col-md-offset-3 col-md-2">                     
+                    <div class="dropdown ">                       
                         <a href="" class="dropdown-toggle logout" data-toggle="dropdown">
                             <span class="caret"></span>
                         </a>
@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-md-2 col-sm-3" id="admin-menu">
                     <ul class="menu-list">
-                        <li><a href="{{url('/post')}}">Manage Post</a></li>
+                        <li><a href="{{url('/post/list')}}">Manage Post</a></li>
                         <li><a href="page">Pages</a></li>
                         <li><a href="post">Post</a></li>
                         

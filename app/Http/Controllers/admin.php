@@ -18,7 +18,7 @@ class admin extends Controller
 		if(isset($result[0]->id)){
 			if($result[0]->status==1){
 				$r->session()->put("ADMIN_ID",$result[0]->id);
-				return redirect('post');
+				return Redirect('post/list');
 
 			}else{
 				session()->flash("msg","Your Account is Deactivated");

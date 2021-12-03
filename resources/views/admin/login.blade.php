@@ -17,7 +17,7 @@
 <div class="col-md-6 offset-md-3">
   <div class="login-form">
     <h1 class="logo">Admin</h1>
-    <form id="" action="login_submit" method ="post">
+    <form id="" action="{{url('login_submit')}}" method ="post">
       @csrf
       <div class="form-group">
         <label>Email</label>

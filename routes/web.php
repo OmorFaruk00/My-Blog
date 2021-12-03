@@ -18,16 +18,20 @@ use Illuminate\Support\Facades\Route;
 Route::view("admin","admin/login");
 Route::post("login_submit","admin@login");
 
-Route::view("add_post","admin/post/add_post");
-Route::post("post_submit","post@store");
-Route::get("post_update/{id}","post@edit_post")->name('post_update');
+
+Route::view("page","admin/page/page");
 
 Route::group(['middleware'=>['admin_auth']], function(){
-Route::get("post","post@show_post");
-Route::view("page","admin/page/page");
+	
+	Route::get("post/list","post@show_post");
+	Route::view("post/add","admin/post/add_post");
+	Route::post("post_submit","post@add_post");
+	Route::get("post/update/{id}","post@edit_post")->name('post/update');
+	Route::post("post_update/{id}","post@update_post");
+	Route::get("post/delete/{id}","post@delete_post");
 });
 
 Route::get('logout', function () {
-    session()->forget('ADMIN_ID');
-    return redirect('admin');
+	session()->forget('ADMIN_ID');
+	return redirect('admin');
 });
