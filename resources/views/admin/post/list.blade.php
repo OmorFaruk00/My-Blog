@@ -25,7 +25,7 @@
         <td>{{$list->added_on}}</td>
         <td> <img src="{{asset('post1/'.$list->image)}}" alt="" width="100px" height="100px"></td> 
         <td>
-          <a href="{{url('post/update/'.$list->id)}}" class="btn btn-primary" >Edit</a>
+          <a href="{{url('post/update/'.$list->id)}}" class="btn btn-primary mb-3" >Edit</a>
           <a href="{{url('post/delete/'.$list->id)}}" class="btn btn-danger">Delete</a>
         </td>  
         

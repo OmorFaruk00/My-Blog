@@ -21,6 +21,11 @@ Route::post("login_submit","admin@login");
 
 Route::view("page","admin/page/page");
 
+Route::view("about","front/about");
+Route::view("contact","front/contact");
+Route::get("/","front@home");
+Route::get("showpost/{id}","front@post");
+
 Route::group(['middleware'=>['admin_auth']], function(){
 	
 	Route::get("post/list","post@show_post");
